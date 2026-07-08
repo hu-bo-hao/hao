@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/quiz/quiz",
+    "pages/result/result"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#7C3AED",
+    "navigationBarTitleText": "趣味人格测试",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F3E8FF"
+  },
+  "style": "v2"
+}

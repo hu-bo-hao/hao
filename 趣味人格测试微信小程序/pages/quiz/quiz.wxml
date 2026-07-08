@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="theme-title">{{themeTitle}}</view>
+  
+  <view class="progress-section">
+    <text class="progress-text">第{{currentIndex + 1}}题 / 共{{questionsList.length}}题</text>
+    <view class="progress-bar">
+      <view class="progress-fill" style="width: {{progressPercent}}%"></view>
+    </view>
+  </view>
+
+  <view class="question-card" :key="question-{{currentIndex}}" :class="{ 'fade-out': isAnimating }">
+    <text class="question-text">{{currentQuestion.text}}</text>
+  </view>
+
+  <view class="options-list">
+    <view 
+      class="option-item" 
+      wx:for="{{currentQuestion.options}}" 
+      wx:key="index"
+      data-score="{{item.score}}"
+      bindtap="onTapOption"
+    >
+      <view class="option-indicator">{{['A', 'B', 'C', 'D'][index]}}</view>
+      <text class="option-text">{{item.txt}}</text>
+    </view>
+  </view>
+
+  <view class="tip-section">
+    <text class="tip-text">💡 请根据第一感觉选择最符合你的答案</text>
+  </view>
+</view>

@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="header">
+    <text class="title">🎯 趣味人格测试</text>
+    <text class="subtitle">探索真实的自己，发现隐藏的性格特质</text>
+  </view>
+
+  <view class="test-list">
+    <view 
+      class="test-card" 
+      wx:for="{{testList}}" 
+      wx:key="id"
+      data-id="{{item.id}}"
+      bindtap="onTapCard"
+    >
+      <view class="card-icon">{{item.icon}}</view>
+      <view class="card-content">
+        <text class="card-title">{{item.title}}</text>
+        <text class="card-desc">{{item.brief}}</text>
+        <view class="card-meta">
+          <text class="question-count">6道题</text>
+          <text class="arrow">→</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="footer">
+    <text class="footer-text">点击卡片开始测试</text>
+  </view>
+</view>

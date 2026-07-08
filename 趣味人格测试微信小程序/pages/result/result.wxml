@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="result-header">
+    <text class="header-title">🎉 你的测试结果出炉啦</text>
+  </view>
+
+  <view class="result-card">
+    <view class="result-emoji">{{result.emoji}}</view>
+    <text class="result-title">{{result.title}}</text>
+  </view>
+
+  <view class="desc-card">
+    <text class="section-title">📝 性格解读</text>
+    <text class="desc-text">{{result.desc}}</text>
+  </view>
+
+  <view class="action-section">
+    <view class="btn btn-primary" bindtap="onRetake">
+      <text>🔄 重新测试</text>
+    </view>
+    <view class="btn btn-secondary" bindtap="onGoHome">
+      <text>🏠 返回首页</text>
+    </view>
+    <view class="btn btn-outline" bindtap="onSaveShare">
+      <text>📷 保存分享图</text>
+    </view>
+  </view>
+
+  <canvas 
+    canvas-id="shareCanvas" 
+    class="share-canvas"
+  ></canvas>
+</view>
